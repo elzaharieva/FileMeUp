@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>File me up</title>
+		<meta charset="UTF-8">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<link rel="stylesheet" type="text/css" href="css/dropzone.css">
+		<script src="js/dropzone.js"></script>
+	</head>
+
+	<body>
+	<div id="wrap">
+			<h1 id="heading">File Me Up</h1>
+			<form action="/view-all">
+    			<input type="submit" value="View all files" class="buttons" id="viewButton" />
+			</form>
+		</div>
+		
+		<div id="upload">
+		<form action="/upload-file" method="post" enctype="multipart/form-data" class="dropzone" >
+			<img id="upload_img" src="images/folder_web_upload.png" alt="upload">
+		</form>
+	</div>	
+	</body>
+</html>
