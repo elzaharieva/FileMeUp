@@ -27,6 +27,13 @@ public class FileUploadServlet extends HttpServlet {
 		req.setCharacterEncoding("UTF-8");
 		resp.setCharacterEncoding("UTF-8");
 		
+		File dir = new File("../data");
+        if (!dir.exists()) {
+            if (!dir.mkdir()) {
+                System.err.println("Failed to create directory!");
+            }
+        }
+		
 		List<Part> fileParts = req.getParts().stream().filter(part -> "file".equals(part.getName()))
 				.collect(Collectors.toList());
 
